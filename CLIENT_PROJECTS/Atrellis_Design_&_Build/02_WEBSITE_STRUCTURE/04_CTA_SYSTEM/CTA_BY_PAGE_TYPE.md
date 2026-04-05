@@ -1,0 +1,1 @@
+# CTA_BY_PAGE_TYPE.md

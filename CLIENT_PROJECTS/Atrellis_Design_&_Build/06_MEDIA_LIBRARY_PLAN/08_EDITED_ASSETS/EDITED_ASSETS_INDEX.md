@@ -1,0 +1,1 @@
+# EDITED_ASSETS_INDEX.md

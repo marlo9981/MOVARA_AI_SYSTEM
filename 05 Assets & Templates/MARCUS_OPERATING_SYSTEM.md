@@ -409,7 +409,7 @@ marcus-os/
     "name": "marcus-ai-operating-system",
     "version": "1.0",
     "owner": "Marcus",
-    "updated": "2026-04-04"
+    "updated": "2026-04-05"
   },
   "agents": {
     "defaultModel": "claude-sonnet-4-20250514",
@@ -468,7 +468,7 @@ cd [project-name]
 
 **Phase 2: Folder Structure ✅ COMPLETE**
 - Created 7 agent category folders (ENGINEERING, PRODUCT, CONSULTING, CONTENT, DESIGN, MARKETING, OPERATIONS)
-- Created 5 skill category folders (consultant-pitches, content-creators, build-systems, case-study-builders, market-researchers)
+- Created 5 skill category folder structure (consultant-pitches, content-creators, build-systems, case-study-builders, market-researchers) — folders created, content pending Phase 5
 - Created 12 _README.md files with structural documentation
 - All folders follow PascalCase naming convention
 
@@ -478,15 +478,22 @@ cd [project-name]
 - Defined ripple-update workflow for agent/skill additions
 - Set version control standards for documentation
 
-**Phase 4: Engineering Agents ✅ COMPLETE**
-- ✅ FullStackArchitect.md — System design, architecture decisions, tech stack evaluation
-- ✅ BackendSpecialist.md — API design, database optimization, server-side logic
-- ✅ FrontendSpecialist.md — UI/UX implementation, component architecture, client logic
-- ✅ DevOpsEngineer.md — Infrastructure, CI/CD, deployment, monitoring
-- ✅ QAAutomation.md — Test strategy, automation frameworks, quality assurance
-- ✅ SecurityExpert.md — Security audit, vulnerability scanning, compliance
+**Phase 4: All 34 Agents ✅ COMPLETE** (as of Apr 5, 2026)
+- ✅ **ENGINEERING (6)**: FullStackArchitect, BackendSpecialist, FrontendSpecialist, DevOpsEngineer, QAAutomation, SecurityExpert
+- ✅ **PRODUCT (3)**: TrendResearcher, FeedbackSynthesizer, SprintPrioritizer
+- ✅ **CONSULTING (5)**: PitchWriter, ROICalculator, CaseStudyBuilder, CompetitiveAnalyzer, BusinessStrategist
+- ✅ **CONTENT (6)**: BlogWriter, VideoScriptWriter, SocialStrategist, LinkedInViralSpecialist, NewsletterEditor, ContentRepurposer
+- ✅ **DESIGN (5)**: UIDesigner, UXResearcher, BrandGuardian, VisualStoryteller, AnimationSpecialist
+- ✅ **MARKETING (5)**: DemandGenerator, GrowthHacker, SEOOptimizer, AnalyticsReporter, FunnelBuilder
+- ✅ **OPERATIONS (4)**: ProjectManager, DeploymentSpecialist, CostOptimizer, QualityAssurance
 
-**Next: PRODUCT & CONSULTING agents** (Phase 5, pending approval)
+**Phase 5: Populate Skills & Create Workflows 🔄 IN PROGRESS**
+- [ ] Populate `/.claude/skills/consultant-pitches/` with RFP templates, pitch frameworks, proposal SOPs
+- [ ] Populate `/.claude/skills/content-creators/` with content calendars, repurposing workflows, distribution templates
+- [ ] Populate `/.claude/skills/build-systems/` with Next.js/Supabase/Three.js setup guides, architecture decisions
+- [ ] Populate `/.claude/skills/case-study-builders/` with data-to-narrative workflows, metrics extraction, design specs
+- [ ] Populate `/.claude/skills/market-researchers/` with competitive analysis templates, trend research SOPs, scoring rubrics
+- [ ] Document multi-agent sequences (hookified common workflows)
 
 ---
 
@@ -500,17 +507,65 @@ cd [project-name]
 
 ---
 
-## Next Steps
+## Next Steps: Phase 5 (Skills & Workflow Optimization)
 
-1. **Create `.claude/skills/` folder** with reusable workflows for your business
-2. **Build project templates** (Next.js, Three.js, presentation starters)
-3. **Document past projects** as reference cases for agents
-4. **Create runbooks** for your most common workflows
-5. **Set up GitHub automation** to spin up projects from this template
+### A. Skills Development (Reusable Agent Workflows)
+
+**Priority 1: Movara AI Operations (Work Visibility) 🔄 IN PROGRESS**
+
+📋 **Full spec:** [`00_Admin/REQUIREMENTS_TASK_ORCHESTRATION.md`](../../00_Admin/REQUIREMENTS_TASK_ORCHESTRATION.md)
+
+- [ ] **TaskWriter Agent** (`agents/OPERATIONS/TaskWriter.md`) — Decompose briefs into subtasks, manage task state
+- [ ] **CodeReviewer Agent** (`agents/OPERATIONS/CodeReviewer.md`) — Review code quality, architecture, security, tests  
+- [ ] **TaskBoard Agent** (`agents/OPERATIONS/TaskBoard.md`) — Visual project state, Kanban, dependencies, burndown
+- [ ] **TaskOrchestrator Skill** (`/.claude/skills/quality-operations/task-orchestrator.md`) — Orchestrates all 3 agents
+
+**Priority 2: Business Workflows**
+- [ ] Create `/.claude/skills/consulting-proposals/` — RFP response templates, pitch frameworks
+- [ ] Create `/.claude/skills/content-operations/` — Blog to newsletter, video + social repurposing
+- [ ] Create `/.claude/skills/product-launches/` — Market research → roadmap → campaign workflow
+- [ ] Create `/.claude/skills/case-study-engine/` — Data → narrative → deck → LinkedIn workflow
+
+### B. Project Templates (Ready-to-Use Starters)
+- [ ] **Next.js + Supabase + Auth Starter** → Use FullStackArchitect + FrontendSpecialist
+- [ ] **Three.js + GSAP Animation Starter** → Use VisualStoryteller + AnimationSpecialist
+- [ ] **Marketing Site + CMS Starter** → Use FrontendSpecialist + BlogWriter + SEOOptimizer
+- [ ] **SaaS Dashboard Starter** → Use FullStackArchitect + UIDesigner + BackendSpecialist
+
+### C. Client Delivery Playbooks
+- [ ] **Website Build Playbook** → Design → Code → Deploy → SEO → Launch
+- [ ] **Automation Audit Playbook** → Research → Design → Build → Test → Scale
+- [ ] **Content Marketing Playbook** → Strategy → Production → Distribution → Analytics
+- [ ] **AI Integration Playbook** → Discovery → Architecture → Implementation → Cost Optimization
+
+### D. Past Projects & Reference Docs
+- [ ] Document completed client work as case studies (enable agents to reference past approaches)
+- [ ] Create LESSONS_LEARNED.md per project type
+- [ ] Build agent-specific reference libraries (e.g., successful pitch templates, design system case studies)
+
+### E. Multi-Model Workflow Documentation
+- [ ] **Agent Cost Optimization Profiles** — Which agents use which models for best ROI
+- [ ] **Common Multi-Agent Chains** — Pre-built sequences (startup hook, content sprint, case study)
+- [ ] **Quality Metrics** — How to measure output quality per agent specialization
 
 ---
 
-**This is your personal AI team. Scale with it.**
+## How to Use This System
+
+**You now have 34 specialized agents organized by function.** This is not a hierarchy—it's a team. Chain them for complex work:
+
+```
+Need to launch a SaaS product?
+→ @trend-researcher (market analysis)
+→ @feedback-synthesizer (customer insights)
+→ @full-stack-architect (technical design)
+→ @ui-designer + @ux-researcher (interface design)
+→ @frontend-developer + @backend-architect (implementation)
+→ @devops-automator (deployment)
+→ @demand-generator + @seo-optimizer (launch)
+```
+
+**This is your personal AI consulting agency. Scale with it.**
 
 ---
 

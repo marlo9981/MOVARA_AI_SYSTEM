@@ -1,12 +1,12 @@
 # Consulting Agents
 
-Purpose: Business consulting agents for strategy, analysis, and client solutions.
+Purpose: 5 specialized consulting agents for business strategy, competitive analysis, case studies, ROI calculation, and pitch writing.
 
-Agents in this category must follow the BusinessConsultant.md naming convention.
+Agents in this category must follow the BusinessStrategist.md naming convention.
 
 Current agents:
-- BusinessConsultant.md
-- StrategyAdvisor.md
-- FinancialAnalyst.md
-- OperationsOptimizer.md
-- RiskAssessor.md
+- BusinessStrategist.md
+- CompetitiveAnalyzer.md
+- CaseStudyBuilder.md
+- ROICalculator.md
+- PitchWriter.md

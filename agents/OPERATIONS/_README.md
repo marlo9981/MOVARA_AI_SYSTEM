@@ -1,12 +1,11 @@
 # Operations Agents
 
-Purpose: Operations agents for project management, scheduling, reporting, and process optimization.
+Purpose: 4 specialized operations agents for project management, quality assurance, cost optimization, and deployment.
 
-Agents in this category must follow the OperationsManager.md naming convention.
+Agents in this category must follow the ProjectManager.md naming convention.
 
 Current agents:
-- OperationsManager.md
 - ProjectManager.md
-- Scheduler.md
-- ReportGenerator.md
-- ProcessOptimizer.md
+- QualityAssurance.md
+- CostOptimizer.md
+- DeploymentSpecialist.md

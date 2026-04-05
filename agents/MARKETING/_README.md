@@ -1,12 +1,12 @@
 # Marketing Agents
 
-Purpose: Marketing agents for campaigns, SEO, email marketing, and market analysis.
+Purpose: 5 specialized marketing agents for analytics, funnels, SEO, growth hacking, and demand generation.
 
-Agents in this category must follow the MarketingManager.md naming convention.
+Agents in this category must follow the AnalyticsReporter.md naming convention.
 
 Current agents:
-- MarketingManager.md
-- SEOspecialist.md
-- EmailMarketer.md
-- CampaignPlanner.md
-- MarketAnalyst.md
+- AnalyticsReporter.md
+- FunnelBuilder.md
+- SEOOptimizer.md
+- GrowthHacker.md
+- DemandGenerator.md

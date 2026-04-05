@@ -1,0 +1,15 @@
+#!/bin/sh
+# Automatically audit CLAUDE.md files before committing
+
+set -e
+
+echo "🔍 Auditing CLAUDE.md files..."
+npm run claude:audit || {
+  echo ""
+  echo "⚠️  Missing or stale CLAUDE.md files detected."
+  echo "   Run 'npm run claude:init' to create missing files."
+  echo ""
+  exit 1
+}
+
+exit 0

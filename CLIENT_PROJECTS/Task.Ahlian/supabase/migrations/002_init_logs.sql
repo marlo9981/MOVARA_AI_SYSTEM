@@ -1,8 +1,8 @@
--- Activity logs
+-- Activity logs for tasks
 CREATE TABLE IF NOT EXISTS logs (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   task_id UUID REFERENCES tasks(id) ON DELETE CASCADE,
-  action TEXT NOT NULL
+  action TEXT NOT NULL 
     CHECK (action IN ('created', 'status_changed', 'priority_changed', 'deleted')),
   old_value JSONB,
   new_value JSONB,
@@ -11,9 +11,11 @@ CREATE TABLE IF NOT EXISTS logs (
 
 -- RLS
 ALTER TABLE logs ENABLE ROW LEVEL SECURITY;
-CREATE POLICY IF NOT EXISTS "Allow all reads" ON logs FOR SELECT USING (true);
-CREATE POLICY IF NOT EXISTS "Allow all inserts" ON logs FOR INSERT WITH CHECK (true);
+DROP POLICY IF EXISTS "Allow all reads" ON logs;
+CREATE POLICY "Allow all reads" ON logs FOR SELECT USING (true);
+DROP POLICY IF EXISTS "Allow all inserts" ON logs;
+CREATE POLICY "Allow all inserts" ON logs FOR INSERT WITH CHECK (true);
 
--- Indexes
+-- Indexes for audit queries
 CREATE INDEX IF NOT EXISTS idx_logs_task_id ON logs(task_id);
 CREATE INDEX IF NOT EXISTS idx_logs_action ON logs(action);

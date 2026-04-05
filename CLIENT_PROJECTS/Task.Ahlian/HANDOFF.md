@@ -9,11 +9,11 @@
 
 ## What Was Designed
 
-**Complete folder structure + architecture for Task.Ahlian** — a three-layer Next.js + Supabase + Telegram task management system.
+**Complete folder structure + architecture for Task.Ahlian** — a streamlined Next.js + Supabase + Telegram task management system.
 
 **Design includes:**
-1. Clean separation of concerns (routes → services → UI)
-2. Monorepo structure (web app + bot + shared types)
+1. Clean separation of concerns (routes → services → UI) in `src/web/`
+2. Unified structure (Dashboard UI + API routes + Bot logic)
 3. Scalability path (Phase 1 → Phase 2 → Phase 3)
 4. Implementation guide (step-by-step code)
 5. Deployment strategy (Vercel + Supabase)
@@ -86,20 +86,20 @@
 ### Folder Structure
 ```
 supabase/migrations/         ← Database
-apps/web/                    ← Dashboard + API
-apps/bot/                    ← Bot services
-packages/shared/             ← Types (no dependencies)
+src/web/app/                 ← Dashboard + API Routes
+src/web/components/          ← High-End UI Components
+src/web/lib/                 ← Services & Supabase Logic
 ```
 
 ### Data Flow
 ```
-User adds task in web dashboard
+User adds task in premium dashboard
   ↓
-POST /api/tasks (thin route)
+POST /api/tasks (thin next.js route)
   ↓
 Supabase inserts into tasks table
   ↓
-Dashboard refetches via useTaskQuery hook
+Dashboard refetches automatically
   ↓
 User sees task immediately
 
@@ -107,11 +107,11 @@ Every day at 9am:
   ↓
 Vercel calls GET /api/cron/recap
   ↓
-Route fetches tasks + calls bot service
+Route fetches tasks + calls telegram service
   ↓
-Bot generates recap string
+Recap string generated
   ↓
-Telegram message sent to chat
+Telegram message sent to chat via bot
 ```
 
 ### Key Principles
@@ -159,29 +159,22 @@ Telegram message sent to chat
 
 See SETUP_PHASE1.md for complete code for all of these:
 
-### Database (2 files)
-1. `supabase/migrations/001_init_tasks.sql`
-2. `supabase/migrations/002_init_logs.sql`
-
 ### Web API (3 files)
-3. `apps/web/lib/supabase/client.ts`
-4. `apps/web/lib/supabase/server.ts`
-5. `apps/web/app/api/tasks/route.ts`
-6. `apps/web/app/api/tasks/[id]/route.ts`
-7. `apps/web/app/api/cron/recap.ts`
+3. `src/web/lib/supabase/client.ts`
+4. `src/web/lib/supabase/server.ts`
+5. `src/web/app/api/tasks/route.ts`
+6. `src/web/app/api/tasks/[id]/route.ts`
+7. `src/web/app/api/telegram/route.ts`
 
-### Web UI (4 files)
-8. `apps/web/hooks/useTaskQuery.ts`
-9. `apps/web/components/features/TaskForm.tsx`
-10. `apps/web/components/features/TaskTable.tsx`
-11. `apps/web/app/page.tsx`
+### Web UI (High-End Dashboard)
+8. `src/web/components/dashboard/Sidebar.tsx`
+9. `src/web/components/dashboard/Metrics.tsx`
+10. `src/web/components/dashboard/TaskManager.tsx`
+11. `src/web/components/dashboard/Inbox.tsx`
+12. `src/web/app/dashboard/page.tsx`
 
-### Bot (2 files)
-12. `apps/bot/src/services/telegram.service.ts`
-13. `apps/bot/src/services/recap.service.ts`
-
-### Config (1 file)
-14. `apps/web/vercel.json` (cron schedule)
+### Config
+13. `src/web/vercel.json` (cron schedule)
 
 **That's it for Phase 1. Copy code snippets from SETUP_PHASE1.md.**
 

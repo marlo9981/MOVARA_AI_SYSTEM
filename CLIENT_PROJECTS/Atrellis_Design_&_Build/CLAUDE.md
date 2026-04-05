@@ -1,119 +1,60 @@
-\# CLAUDE.md
+# CLAUDE.md — Atrellis Design & Build
 
-\#\# Project Overview
+## Project Overview
 
-\*\*Project Name:\*\* Atrellis Design & Build Website  
-\*\*Description:\*\*  
-A premium, high-conversion website for Atrellis Design & Build that showcases balcony and outdoor-living solutions such as Zipblinds, roofing systems, roller blinds, and related full home renovation offerings. The website should position Atrellis as a design-led, technically credible, high-trust brand and drive qualified consultation enquiries from Singapore homeowners. \[cite:16\]\[web:1\]\[web:3\]
+A premium, high-conversion website and AI-driven platform for Atrellis Design & Build, positioning them as the design-led authority for balcony and outdoor-living solutions in Singapore.
 
-\---
+**Client:** Atrellis Design & Build
+**Status:** PLANNING (Initial Scaffolding)
+**Lead Agent:** Full-Stack Architect
+**Key Differentiator:** Superior UI/UX (GSAP/Architectural Reveal) + Integrated Quote Engine
 
-\#\# Company Background
+---
 
-Atrellis is a Singapore-based design-and-build / renovation business focused on refined residential living solutions, especially balcony and exterior enhancement systems. Public-facing brand descriptions emphasize architectural precision, engineering-led execution, luxury positioning, and an “all under one roof” service model, while Singapore business records show Atrellis Pte. Ltd. as a live Singapore-registered company incorporated on 7 January 2025\. \[web:1\]\[web:3\]\[web:4\]
+## Operating Rules (Mandatory)
 
-The business appears to serve homeowners looking for practical but premium upgrades such as zipblinds, roofing, blinds(Manual rollerblinds, Venetian Blinds, Korean combi blinds, and full home renovation/styling with home decor-related solutions. The brand direction should therefore balance aspiration and elegance with trust, installation competence, and clear service communication with a Full Design and Build solution all in one company. \[web:1\]\[web:2\]\[cite:20\]
+1.  **Sequence:** Pages first, services second, platform third.
+2.  **Separation:** Keep public-site logic (Website MVP) separate from future-app logic (Platform Roadmap).
+3.  **Prompts:** Keep prompt systems (Atrellis-specific) separate from business documentation.
+4.  **Commercials:** Keep pricing/commercial logic separate from client experience (AI/UX) logic.
+5.  **Media:** Always store planning for media (Placeholders/Maps) before storing the actual media assets.
+6.  **Repo Mirroring:** Adhere strictly to the mapping between the filing system and the repository architecture.
+7.  **Content Logic:** `05_CONTENT_SEO_AIO/05_BLOG_ENGINE/` is the **Master Blog Engine** (Source of Truth for topics, SEO, and AIO logic); `03_PAGE_SYSTEM/04_PROJECTS_BLOGS/` is the **Display Layer** (UX/UI for public-facing design, archives, and filtering).
 
-\---
+---
 
-\#\# Success Metrics
+## Canonical Structure & Repo Mapping
 
-\#\#\# Primary KPIs
+| Filing Directory | Repository Equivalent | Purpose |
+|------------------|----------------------|---------|
+| `03_PAGE_SYSTEM/` | `app/(main)/*` | Core app routes and page logic |
+| `04_SERVICE_CATEGORY_SYSTEM/` | `app/(services)/*` | Service landing page content and route segments |
+| `06_MEDIA_LIBRARY_PLAN/09_EXPORTS_FOR_WEB/` | `public/assets/*` | Final optimized assets for web delivery |
+| `09_BUILD_SYSTEM/03_COMPONENT_SYSTEM/` | `components/*` | Reusable UI and feature components |
+| `09_BUILD_SYSTEM/06_ANIMATION_SYSTEM/` | `lib/animations.ts` | GSAP helpers and reveal logic |
+| `10_PLATFORM_FUTURE/` | `app/(platform)/*` | Future modules (Configurators, Dashboards) |
 
-\* Qualified lead conversions per month  
-\* Consultation booking rate (visitor → form submission / WhatsApp / call)  
-\* Lead quality score, measured by project fit, budget fit, and property type  
-\* Landing-page conversion rate for core service pages  
-\* Cost per qualified lead for paid traffic campaigns
+---
 
-\#\#\# Secondary Metrics
+## Prompt & Agent Strategy (`11_PROMPTS_AND_AGENTS/`)
 
-\* Average engagement time on key product/service pages  
-\* Scroll depth on landing pages and case-study pages  
-\* Interaction rate with high-intent UI elements (gallery, product selectors, videos, CTA blocks)  
-\* Organic search traffic growth for Singapore renovation / balcony-related terms  
-\* Bounce rate reduction on core acquisition pages  
-\* Return visitor rate from remarketing and branded traffic
+-   **01–05:** Atrellis-specific prompts (Brand Voice, UI rules, Service specs).
+-   **06_SHARED_MOVARA_REFERENCES:** Global Movara AI agent logic and reusable prompts.
+-   **08_CLAUDE_MD / 09_GEMINI_MD:** Platform-specific instruction sets for clean context.
 
-\#\#\# Evidence of Success
+---
 
-Success is not just higher traffic; it is a measurable increase in qualified homeowners entering the enquiry pipeline, especially for balcony upgrades, shading systems, and premium renovation services. The website should help visitors understand what Atrellis does, trust the brand quickly, and take action without confusion. \[cite:16\]\[cite:19\]\[web:1\]
+## Tech Stack
 
-\---
+-   **Frontend:** Next.js 15+ (App Router), TypeScript, Tailwind CSS.
+-   **Animations:** GSAP + ScrollTrigger (Architectural Reveal).
+-   **Backend:** Supabase (Auth, DB, RLS).
+-   **Deployment:** Vercel (Edge).
 
-\#\# Stakeholders
+---
 
-\#\#\# Internal
+## Next Steps
 
-\* Founder / Business Lead  
-\* Atrellis sales and consultation team  
-\* Design & Build / operations team  
-\* Web development / product implementation lead  
-\* Marketing / content / paid acquisition owner
-
-\#\#\# External
-
-\* HDB and condo homeowners in Singapore  
-\* Landed property owners seeking outdoor-living upgrades  
-\* Prospective renovation clients comparing vendors  
-\* Property partners, contractors, and developers  
-\* Traffic platforms and lead channels, including Google Search, Meta, SEO, and WhatsApp enquiry flows
-
-\#\#\# Primary User
-
-The main website user is a homeowner who wants a premium-looking, practical solution for balcony or exterior living enhancement and needs enough confidence to request a consultation. The site should be optimized first for this buyer, not for internal teams or generic design audiences. \[web:1\]\[web:2\]\[cite:16\]
-
-\---
-
-\#\# Constraints
-
-\#\#\# Technical
-
-\* Use the existing modern stack direction: Next.js, TypeScript, Tailwind, and deployment-ready frontend practices  
-\* Must load quickly despite visual richness, animations, and media-heavy storytelling  
-\* Mobile-first performance is mandatory because many users will discover the brand via ads or social on mobile  
-\* Architecture should support future additions such as configurators, galleries, quote flows, CRM integrations, and automation layers  
-\* Content structure must be maintainable without forcing major rewrites when new services are added
-
-\#\#\# Business
-
-\* The website must prioritize qualified leads over vanity traffic  
-\* Premium positioning must be clear without sounding vague or overly luxurious  
-\* Budget and tool usage should remain disciplined; avoid unnecessary platform complexity  
-\* Messaging must differentiate Atrellis from generic renovation contractors  
-\* Trust-building is essential because visitors are making high-consideration home upgrade decisions
-
-\#\#\# Design
-
-\* Visual standard should feel premium, minimal, and high-trust rather than template-like  
-\* UI should support conversion, not distract from it  
-\* Strong visual storytelling is encouraged, but clarity must win over novelty  
-\* Avoid clutter, feature overload, and overexplaining technical details too early  
-\* The design should feel architectural, refined, and engineered rather than flashy
-
-\#\#\# Content
-
-\* Copy must be specific to Atrellis services, market, and positioning in Singapore  
-\* Avoid generic renovation wording, filler claims, and empty luxury language  
-\* The website should explain products and outcomes in plain English for homeowners  
-\* Service pages should balance aspiration, technical confidence, and conversion intent
-
-\#\#\# Operational
-
-\* The site must be easy to update with new products, case studies, offers, and service categories  
-\* Page structure should scale into future lead magnets, blog content, and SEO landing pages  
-\* CRM, automation, and analytics integrations should be easy to layer in later  
-\* Internal teams should be able to reuse sections, patterns, and content blocks without rebuilding pages from scratch
-
-\---
-
-\#\# Notes for Claude
-
-\* Prioritize conversion clarity, trust, and premium positioning in every output  
-\* Design for qualified homeowner action, not just visual impressiveness  
-\* Treat Atrellis as a design-led, technically credible Singapore brand  
-\* Avoid generic agency website patterns and generic renovation copy  
-\* Think in full funnel terms: acquisition → trust → education → action  
-\* Default to concise, elegant, high-signal design and content  
-\* Every section should either build trust, explain value, or drive enquiry
-
+- [ ] Finalize `README.md` and `HANDOFF.md`.
+- [ ] Initialize `ARCHITECTURE.md` with detailed repo mirroring logic.
+- [ ] Begin Phase 1.1: Discovery & Sitemap in `02_WEBSITE_STRUCTURE/`.

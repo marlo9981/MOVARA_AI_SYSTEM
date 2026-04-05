@@ -36,6 +36,7 @@ AI Workflow ROI
 - Formula: (Revenue from AI-assisted projects ÷ Total AI tool spend) × 100
 - Target: >500x ROI
 - Benchmark: $1.71 workflow cost vs. $3,000–$15,000 SGD project value
+- **Ahlian Standard**: `(Estimated Task Value ÷ $1.71 Tool Cost) × 100`
 
 Cost Per Deliverable
 - Definition: Total AI model cost to produce one client-ready output
@@ -48,6 +49,7 @@ Time-to-Deliverable
 - Formula: End time − Start time per workflow run
 - Target: <45 minutes per deliverable
 - Current benchmark: 32 min (Research-Analysis-Workflow)
+- **Ahlian Revision Standard**: Automate revision tracking via `COUNT(logs WHERE action = 'status_changed')`.
 
 ---
 

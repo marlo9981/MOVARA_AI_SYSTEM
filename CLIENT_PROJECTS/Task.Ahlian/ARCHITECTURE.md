@@ -16,18 +16,12 @@ Task.Ahlian/
 ├── .env.example
 ├── .gitignore
 │
-├── supabase/
-│   ├── migrations/
-│   │   ├── 001_init_tasks.sql
-│   │   └── 002_init_logs.sql
-│   ├── config.toml
-│   └── seed.sql
-│
-├── apps/web/
-│   ├── package.json
-│   ├── tsconfig.json
-│   ├── next.config.js
-│   ├── vercel.json
+├── src/
+│   ├── web/
+│   │   ├── package.json
+│   │   ├── tsconfig.json
+│   │   ├── next.config.ts
+│   │   ├── vercel.json
 │   ├── .env.example
 │   │
 │   ├── public/

@@ -1,0 +1,1 @@
+# SEO_PROMPTS_MASTER.md

@@ -1,0 +1,1 @@
+# RAW_ASSETS_INDEX.md

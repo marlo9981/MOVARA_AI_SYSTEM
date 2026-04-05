@@ -1,12 +1,10 @@
 # Product Agents
 
-Purpose: Product management agents for roadmapping, feature specs, user research, and pricing strategy.
+Purpose: 3 specialized product agents for market research, customer feedback synthesis, and sprint prioritization.
 
-Agents in this category must follow the ProductManager.md naming convention.
+Agents in this category must follow the TrendResearcher.md naming convention.
 
 Current agents:
-- ProductManager.md
-- UserResearcher.md
-- PricingStrategist.md
-- RoadmapPlanner.md
-- FeatureSpecWriter.md
+- TrendResearcher.md
+- FeedbackSynthesizer.md
+- SprintPrioritizer.md

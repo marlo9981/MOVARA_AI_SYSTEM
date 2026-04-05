@@ -1,0 +1,15 @@
+{
+  "name": "movara-ai",
+  "version": "1.0.0",
+  "description": "Movara AI — Premium UI/UX & Workflow Automation Agency",
+  "private": true,
+  "scripts": {
+    "claude:audit": "node scripts/audit-claude-files.js",
+    "claude:init": "node scripts/init-claude-files.js",
+    "claude:check": "npm run claude:audit || npm run claude:init",
+    "prepare": "husky install 2>/dev/null || true"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0"
+  }
+}

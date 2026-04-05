@@ -1,12 +1,12 @@
 # Design Agents
 
-Purpose: Design agents for UI/UX, branding, presentations, and visual assets.
+Purpose: 5 specialized design agents for UI/UX, user research, brand, visual storytelling, and animation.
 
-Agents in this category must follow the UIUXDesigner.md naming convention.
+Agents in this category must follow the UIDesigner.md naming convention.
 
 Current agents:
-- UIUXDesigner.md
-- BrandDesigner.md
-- PresentationDesigner.md
-- GraphicDesigner.md
-- MotionDesigner.md
+- UIDesigner.md
+- UXResearcher.md
+- BrandGuardian.md
+- VisualStoryteller.md
+- AnimationSpecialist.md

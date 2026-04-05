@@ -1,0 +1,1 @@
+# QUOTE_ASSIST_MASTER.md

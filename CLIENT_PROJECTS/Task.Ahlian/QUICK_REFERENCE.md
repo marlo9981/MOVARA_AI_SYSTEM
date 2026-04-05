@@ -11,31 +11,24 @@ supabase/migrations/          ← Database schema
   001_init_tasks.sql
   002_init_logs.sql
 
-apps/web/
+src/web/
   app/
-    page.tsx                  ← Dashboard (manual entry + table)
+    dashboard/page.tsx        ← Premium Dashboard
     api/
       tasks/route.ts          ← GET/POST /api/tasks
       tasks/[id]/route.ts     ← PATCH/DELETE /api/tasks/[id]
-      cron/recap.ts           ← Vercel cron job (9am)
+      telegram/route.ts       ← Bot messaging + Cron logic
   components/
-    features/
-      TaskForm.tsx            ← Manual input form
-      TaskTable.tsx           ← Task list + inline edits
-  hooks/
-    useTaskQuery.ts           ← Fetch + refetch
+    dashboard/
+      Sidebar.tsx             ← Premium Sidebar
+      Metrics.tsx             ← Premium Charts
+      TaskManager.tsx         ← Timeline Task List
+      Inbox.tsx               ← Premium Chat UI
   lib/
     supabase/
       client.ts               ← Browser client
       server.ts               ← Server client
     types.ts                  ← Task, ApiResponse types
-
-apps/bot/src/services/
-  telegram.service.ts         ← Send Telegram message
-  recap.service.ts            ← Generate recap text
-
-packages/shared/src/types/
-  task.ts                     ← Shared Task interface
 
 .env.example                  ← All required secrets (copy to .env.local)
 ```
@@ -51,27 +44,16 @@ Is it a database schema?
   → supabase/migrations/*.sql
 
 Is it an HTTP endpoint?
-  → apps/web/app/api/...route.ts
+  → src/web/app/api/...route.ts
 
 Is it a React component (UI)?
-  → apps/web/components/...tsx
+  → src/web/components/dashboard/...tsx
 
-Is it React state logic (fetch, cache)?
-  → apps/web/hooks/use...ts
-
-Is it business logic (recap, parsing)?
-  → apps/bot/src/services/...ts
-
-Is it an external API wrapper?
-  → apps/bot/src/services/...service.ts
+Is it a service or utility?
+  → src/web/lib/...ts
 
 Is it a TypeScript type?
-  → packages/shared/src/types/...ts
-    (only if used by web AND bot)
-    Otherwise: apps/web/lib/types.ts
-
-Is it a pure utility (date, format)?
-  → apps/web/lib/...ts (or apps/bot/src/utils/...ts)
+  → src/web/lib/types.ts
 
 Is it a secret or config?
   → .env.example (then .env.local)

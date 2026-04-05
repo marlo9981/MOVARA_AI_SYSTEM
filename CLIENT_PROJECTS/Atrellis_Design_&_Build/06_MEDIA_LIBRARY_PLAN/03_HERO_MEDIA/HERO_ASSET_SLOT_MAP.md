@@ -1,0 +1,1 @@
+# HERO_ASSET_SLOT_MAP.md
