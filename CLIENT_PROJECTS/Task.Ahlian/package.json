@@ -1,0 +1,17 @@
+{
+  "name": "task-ahlian",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["src/*", "packages/*"],
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "dev:bot": "pnpm --filter bot dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "deploy:web": "pnpm --filter web deploy"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "eslint": "^8.55.0"
+  }
+}
