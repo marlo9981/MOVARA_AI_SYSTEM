@@ -1,0 +1,37 @@
+{
+  "name": "movara-ai-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "bot:start": "ts-node src/server.ts",
+    "bot:dev": "ts-node --watch src/server.ts",
+    "test:telegram": "ts-node test-telegram.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlo9981/MOVARA_AI_SYSTEM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/marlo9981/MOVARA_AI_SYSTEM/issues"
+  },
+  "homepage": "https://github.com/marlo9981/MOVARA_AI_SYSTEM#readme",
+  "dependencies": {
+    "dotenv": "^17.4.0",
+    "express": "^5.2.1",
+    "node-cron": "^4.2.1",
+    "node-telegram-bot-api": "^0.67.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.5.2",
+    "@types/node-telegram-bot-api": "^0.64.14",
+    "typescript": "^6.0.2"
+  }
+}
