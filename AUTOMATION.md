@@ -45,13 +45,13 @@ Runs audit, and if it fails, creates missing files automatically.
 📋 CLAUDE.md Audit Report
 
 🔍 Main Directories:
-  ✓ 00_Admin — OK (5 days old)
-  ✓ 01 Strategy — OK (8 days old)
-  ✓ 02 Services & Pricing — OK (3 days old)
-  ✓ 03 Sales Process — OK (12 days old)
-  ✓ 04 Delivery Playbooks — OK (10 days old)
-  ✓ 05 Assets & Templates — OK (2 days old)
-  ✓ 06 Metrics & Dashboards — OK (4 days old)
+  ✓ 00_ADMIN — OK (5 days old)
+  ✓ 01_STRATEGY — OK (8 days old)
+  ✓ 02_SERVICES_AND_PRICING — OK (3 days old)
+  ✓ 03_SALES_PROCESS — OK (12 days old)
+  ✓ 04_DELIVERY_PLAYBOOKS — OK (10 days old)
+  ✓ 05_ASSETS_TEMPLATES — OK (2 days old)
+  ✓ 06_METRICS_DASHBOARDS — OK (4 days old)
   ✓ CLIENT_PROJECTS — OK (new)
 
 🔍 Client Projects:
@@ -169,19 +169,19 @@ The scripts enforce this exact structure:
 
 ```
 Movara AI/
-├── 00_Admin/
+├── 00_ADMIN/
 │   └── CLAUDE.md ✓
-├── 01 Strategy/
+├── 01_STRATEGY/
 │   └── CLAUDE.md ✓
-├── 02 Services & Pricing/
+├── 02_SERVICES_AND_PRICING/
 │   └── CLAUDE.md ✓
-├── 03 Sales Process/
+├── 03_SALES_PROCESS/
 │   └── CLAUDE.md ✓
-├── 04 Delivery Playbooks/
+├── 04_DELIVERY_PLAYBOOKS/
 │   └── CLAUDE.md ✓
-├── 05 Assets & Templates/
+├── 05_ASSETS_TEMPLATES/
 │   └── CLAUDE.md ✓
-├── 06 Metrics & Dashboards/
+├── 06_METRICS_DASHBOARDS/
 │   └── CLAUDE.md ✓
 └── CLIENT_PROJECTS/
     ├── CLAUDE.md ✓
@@ -244,8 +244,8 @@ const STALE_DAYS = 30;  // ← Change this number
 2. Add to `REQUIRED_DIRS`:
 ```javascript
 const REQUIRED_DIRS = [
-  '00_Admin',
-  '01 Strategy',
+  '00_ADMIN',
+  '01_STRATEGY',
   // ... existing entries ...
   'NEW_FOLDER_NAME',  // ← Add here
 ];
@@ -349,7 +349,7 @@ This ensures every build validates the parent workspace structure.
 
 ## Related Documents
 
-- **[00_Admin/CLAUDE.md](00_Admin/CLAUDE.md)** — Main workspace guidelines
+- **[00_ADMIN/CLAUDE.md](00_ADMIN/CLAUDE.md)** — Main workspace guidelines
 - **[CLIENT_PROJECTS/CLAUDE.md](CLIENT_PROJECTS/CLAUDE.md)** — Client project standards
 - **[scripts/audit-claude-files.js](scripts/audit-claude-files.js)** — Audit logic
 - **[scripts/init-claude-files.js](scripts/init-claude-files.js)** — Template logic

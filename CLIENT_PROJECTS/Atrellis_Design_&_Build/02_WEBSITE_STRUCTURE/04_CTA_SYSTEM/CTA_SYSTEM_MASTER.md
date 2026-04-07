@@ -1,1 +1,0 @@
-# CTA_SYSTEM_MASTER.md

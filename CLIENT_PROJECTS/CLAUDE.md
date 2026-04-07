@@ -245,9 +245,9 @@ A: Update HANDOFF.md immediately. Communicate timeline changes to client. Delive
 
 ## Links & Resources
 
-- **Movara AI Playbooks:** `04 Delivery Playbooks/`
-- **Proposal Template:** `05 Assets & Templates/Proposal_Template.md`
-- **Main CLAUDE.md:** `00_Admin/CLAUDE.md`
+- **Movara AI Playbooks:** `04_DELIVERY_PLAYBOOKS/`
+- **Proposal Template:** `05_ASSETS_TEMPLATES/Proposal_Template.md`
+- **Main CLAUDE.md:** `00_ADMIN/CLAUDE.md`
 
 ---
 

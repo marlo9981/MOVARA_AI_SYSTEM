@@ -9,13 +9,13 @@ const fs = require('fs');
 const path = require('path');
 
 const REQUIRED_DIRS = [
-  '00_Admin',
-  '01 Strategy',
-  '02 Services & Pricing',
-  '03 Sales Process',
-  '04 Delivery Playbooks',
-  '05 Assets & Templates',
-  '06 Metrics & Dashboards',
+  '00_ADMIN',
+  '01_STRATEGY',
+  '02_SERVICES_AND_PRICING',
+  '03_SALES_PROCESS',
+  '04_DELIVERY_PLAYBOOKS',
+  '05_ASSETS_TEMPLATES',
+  '06_METRICS_DASHBOARDS',
   'CLIENT_PROJECTS',
 ];
 
@@ -65,7 +65,7 @@ Completeness: [%] — [Description]
 
 ---
 
-For full project context, see \`00_Admin/CLAUDE.md\`.
+For full project context, see \`00_ADMIN/CLAUDE.md\`.
 `,
 
   CLIENT_PROJECTS: `# CLAUDE.md — Client Projects
@@ -120,7 +120,7 @@ CLIENT_PROJECTS/
 
 ---
 
-For Movara AI operations guidance, see \`00_Admin/CLAUDE.md\`.
+For Movara AI operations guidance, see \`00_ADMIN/CLAUDE.md\`.
 `,
 };
 

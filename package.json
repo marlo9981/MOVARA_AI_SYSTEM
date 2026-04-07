@@ -4,12 +4,34 @@
   "description": "Movara AI — Premium UI/UX & Workflow Automation Agency",
   "private": true,
   "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "claude:audit": "node scripts/audit-claude-files.js",
     "claude:init": "node scripts/init-claude-files.js",
     "claude:check": "npm run claude:audit || npm run claude:init",
     "prepare": "husky install 2>/dev/null || true"
   },
   "devDependencies": {
-    "husky": "^8.0.0"
+    "@types/node": "^25.5.2",
+    "@types/react": "^19.2.14",
+    "dotenv": "^17.4.1",
+    "husky": "^8.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "@ai-sdk/gateway": "^3.0.91",
+    "@ai-sdk/react": "^3.0.151",
+    "@google/generative-ai": "^0.24.1",
+    "@tailwindcss/postcss": "^4.2.2",
+    "ai": "^6.0.149",
+    "autoprefixer": "^10.4.27",
+    "next": "^16.2.2",
+    "postcss": "^8.5.8",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.2"
   }
 }
