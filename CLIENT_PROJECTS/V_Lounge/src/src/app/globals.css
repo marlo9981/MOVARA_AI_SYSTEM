@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #e8e0d4;
+  --gold: #c9a96e;
+  --gold-light: #dfc08a;
+  --gold-dark: #a07d42;
+  --purple: #2d1b3d;
+  --purple-deep: #1a0f24;
+  --amber: #b8860b;
+  --cream: #f5f0e8;
+  --muted: #6b6560;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-purple: var(--purple);
+  --color-purple-deep: var(--purple-deep);
+  --color-amber: var(--amber);
+  --color-cream: var(--cream);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gold underline accent */
+.gold-line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* Atmospheric gradient overlay */
+.atmosphere-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 10, 0.3) 0%,
+    rgba(10, 10, 10, 0.6) 40%,
+    rgba(10, 10, 10, 0.85) 100%
+  );
+}
+
+/* Subtle glow effect */
+.gold-glow {
+  text-shadow: 0 0 40px rgba(201, 169, 110, 0.15);
+}
